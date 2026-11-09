@@ -4,8 +4,6 @@
 
 <br />
 
-<img src="assets/ys-profile-avatar.svg" alt="YS data analytics monogram avatar in a gradient circle" width="112" />
-
 ### Hello, I'm Yuvashankar 👋
 
 **Aspiring Data Analyst · B.Tech in Computer Science (AI & Data Science)**
