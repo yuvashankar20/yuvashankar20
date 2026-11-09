@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="176" viewBox="0 0 1000 176" role="img" aria-label="Animated data analyst workflow: Question, Prepare, Analyze, Explain">
+<defs>
+ <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#132348"/><stop offset=".55" stop-color="#34277E"/><stop offset="1" stop-color="#11496A"/></linearGradient>
+ <linearGradient id="beam"><stop offset="0" stop-color="#75F4CF"/><stop offset=".5" stop-color="#79C5FF"/><stop offset="1" stop-color="#F0A8EF"/></linearGradient>
+ <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" stroke="#FFF" stroke-opacity=".065" fill="none"/></pattern>
+ <clipPath id="round"><rect width="1000" height="176" rx="21"/></clipPath>
+</defs>
+<style>
+  .flow{stroke-dasharray:8 15;animation:run 9s linear infinite}
+  .glow{animation:pulse 4s ease-in-out infinite}
+  .rise{animation:lift 6s ease-in-out infinite}
+  .rise2{animation:lift 6s ease-in-out -2s infinite}
+  .twinkle{animation:tw 3.4s ease-in-out infinite}
+  .twinkle:nth-child(2n){animation-delay:-1.6s}
+  @keyframes run{to{stroke-dashoffset:-460}}
+  @keyframes pulse{50%{opacity:.4;transform:scale(.97)}}
+  @keyframes lift{50%{transform:translateY(-5px)}}
+  @keyframes tw{50%{opacity:1}}
+  @media(prefers-reduced-motion:reduce){.flow,.glow,.rise,.rise2,.twinkle{animation:none!important}.traveler{display:none!important}}
+</style>
+<g clip-path="url(#round)">
+<rect width="1000" height="176" fill="url(#panel)"/><rect width="1000" height="176" fill="url(#grid)"/>
+<path d="M20 88H980" stroke="#FFFFFF" stroke-opacity=".13" stroke-width="8" stroke-linecap="round"/>
+<path class="flow" d="M20 88H980" stroke="url(#beam)" stroke-width="5" stroke-linecap="round" fill="none"/>
+<g class="traveler"><circle cx="0" cy="0" r="7" fill="#FFF" stroke="#77F3D7" stroke-width="4"><animateMotion dur="6s" repeatCount="indefinite" path="M28 88H972"/></circle></g>
+<g font-family="Segoe UI,Arial,sans-serif" text-anchor="middle">
+<g class="rise">
+<rect x="28" y="34" width="207" height="108" rx="18" fill="#182A59" stroke="#88EEDD" stroke-opacity=".7"/><rect x="42" y="47" width="179" height="5" rx="2.5" fill="#77EDC9"/>
+<text x="131" y="97" fill="#FFFFFF" font-size="30" font-weight="750">QUESTION</text>
+<text x="131" y="120" fill="#BDEBEE" font-size="15">Define the goal</text>
+</g>
+<g class="rise2">
+<rect x="274" y="34" width="207" height="108" rx="18" fill="#202B60" stroke="#95D2FF" stroke-opacity=".7"/><rect x="288" y="47" width="179" height="5" rx="2.5" fill="#84BEFF"/>
+<text x="377" y="97" fill="#FFFFFF" font-size="30" font-weight="750">PREPARE</text>
+<text x="377" y="120" fill="#C7DDFE" font-size="15">Clean the data</text>
+</g>
+<g class="rise">
+<rect x="520" y="34" width="207" height="108" rx="18" fill="#332B68" stroke="#C4B1FF" stroke-opacity=".75"/><rect x="534" y="47" width="179" height="5" rx="2.5" fill="#B9A0FF"/>
+<text x="623" y="97" fill="#FFFFFF" font-size="30" font-weight="750">ANALYZE</text>
+<text x="623" y="120" fill="#E3D8FF" font-size="15">Measure &amp; visualize</text>
+</g>
+<g class="rise2">
+<rect x="766" y="34" width="207" height="108" rx="18" fill="#362C64" stroke="#F2B1DA" stroke-opacity=".8"/><rect x="780" y="47" width="179" height="5" rx="2.5" fill="#F4B0DB"/>
+<text x="869" y="97" fill="#FFFFFF" font-size="30" font-weight="750">EXPLAIN</text>
+<text x="869" y="120" fill="#F3DFF2" font-size="15">Recommend actions</text>
+</g></g>
+<g fill="#C8FEF1"><circle class="twinkle" cx="248" cy="37" r="3"/><circle class="twinkle" cx="499" cy="142" r="3"/><circle class="twinkle" cx="750" cy="45" r="3"/></g>
+</g></svg>
