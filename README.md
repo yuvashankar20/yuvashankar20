@@ -4,6 +4,8 @@
 
 <br />
 
+<img src="assets/ys-profile-avatar.svg" alt="YS data analytics monogram avatar in a gradient circle" width="112" />
+
 ### Hello, I'm Yuvashankar 👋
 
 **Aspiring Data Analyst · B.Tech in Computer Science (AI & Data Science)**
@@ -88,19 +90,15 @@ Design a clear performance dashboard with documented metrics and business takeaw
 - 📊 **Excel & Power BI:** modeling, DAX, dashboards, and KPI reporting
 - 🧠 **Statistics & business thinking:** hypotheses, metrics, and clear storytelling
 
-### 🎯 My approach
+### 🎯 How I work with data
 
-```text
-Ask a useful question
-        ↓
-Understand and validate the data
-        ↓
-Analyze patterns and measure KPIs
-        ↓
-Visualize what matters
-        ↓
-Explain insights, uncertainty, and next steps
-```
+<div align="center">
+
+<img src="assets/data-workflow-animated.svg" alt="Animated workflow showing four steps: Question, Prepare, Analyze, and Explain" width="100%" />
+
+</div>
+
+**Question → Prepare → Analyze → Explain.** For every case study, I'll describe the business problem, methods, evidence, limitations, and recommendations.
 
 ---
 
