@@ -1,4 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-label="Yuvashankar. Data analytics and business intelligence. From questions to decisions.">
+<style>
+  /* Lightweight, self-contained README animation; no JavaScript or external assets. */
+  .bar-rise { transform-box: fill-box; transform-origin: center bottom; animation: barBreath 6s ease-in-out infinite; }
+  .bars rect:nth-child(2) { animation-delay: -.8s; }
+  .bars rect:nth-child(3) { animation-delay: -1.8s; }
+  .bars rect:nth-child(4) { animation-delay: -3s; }
+  .bars rect:nth-child(5) { animation-delay: -2.1s; }
+  .bars rect:nth-child(6) { animation-delay: -4.2s; }
+  .bars rect:nth-child(7) { animation-delay: -2.7s; }
+  .chart-flow { stroke-dasharray: 4 18; animation: chartDash 5s linear infinite; }
+  .orb-one { animation: orbPulse 7s ease-in-out infinite; }
+  .orb-two { animation: orbPulse 9s ease-in-out -4s infinite; }
+  .live-indicator { animation: livePulse 2.2s ease-in-out infinite; }
+  .cursor { animation: livePulse 1.4s step-end infinite; }
+  .graph-node { transform-box: fill-box; transform-origin: center; animation: nodeBeat 5s ease-in-out infinite; }
+  .graph-node:nth-child(2n) { animation-delay: -2.5s; }
+  .graph-node:nth-child(3n) { animation-delay: -1.2s; }
+  @keyframes chartDash { to { stroke-dashoffset: -220; } }
+  @keyframes barBreath { 0%,100% { transform: scaleY(1); } 50% { transform: scaleY(.82); } }
+  @keyframes orbPulse { 0%,100% { opacity: .17; } 50% { opacity: .29; } }
+  @keyframes livePulse { 0%,100% { opacity: .45; } 50% { opacity: 1; } }
+  @keyframes nodeBeat { 0%,100% { transform: scale(1); } 50% { transform: scale(1.24); } }
+  @media (prefers-reduced-motion: reduce) {
+    .bar-rise,.chart-flow,.orb-one,.orb-two,.live-indicator,.cursor,.graph-node { animation: none !important; }
+    .moving-point { display:none; }
+  }
+  </style>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#11204C"/>
@@ -20,12 +47,12 @@
   <g clip-path="url(#rounded)">
     <rect width="1200" height="360" fill="url(#bg)"/>
     <rect width="1200" height="360" fill="url(#grid)"/>
-    <circle cx="1072" cy="20" r="165" fill="#7C6CFF" opacity=".22" filter="url(#glow)"/>
-    <circle cx="714" cy="339" r="150" fill="#25E7CE" opacity=".18" filter="url(#glow)"/>
+    <circle class="orb-one" cx="1072" cy="20" r="165" fill="#7C6CFF" opacity=".22" filter="url(#glow)"/>
+    <circle class="orb-two" cx="714" cy="339" r="150" fill="#25E7CE" opacity=".18" filter="url(#glow)"/>
     <circle cx="50" cy="350" r="180" fill="#C47AFE" opacity=".13" filter="url(#glow)"/>
     <g font-family="Segoe UI, Arial, sans-serif">
       <rect x="58" y="51" width="293" height="33" rx="16.5" fill="#FFFFFF" fill-opacity=".11" stroke="#FFFFFF" stroke-opacity=".24"/>
-      <circle cx="77" cy="67.5" r="4.5" fill="#6EF4D2"/>
+      <circle class="live-indicator" cx="77" cy="67.5" r="4.5" fill="#6EF4D2"/>
       <text x="92" y="73" font-size="14" font-weight="650" letter-spacing="1.8" fill="#DDF8FF">DATA ANALYTICS  •  BI</text>
       <text x="57" y="170" font-size="70" font-weight="750" letter-spacing="-2" fill="#FFFFFF">Yuvashankar</text>
       <rect x="59" y="188" width="67" height="5" rx="2.5" fill="#70EDCC"/>
@@ -44,18 +71,22 @@
       <g opacity=".13" stroke="#FFFFFF" stroke-width="1">
         <path d="M44 99H340M44 141H340M44 183H340M44 225H340"/>
       </g>
-      <g fill="url(#bar)">
-        <rect x="54" y="172" width="28" height="54" rx="6" opacity=".69"/>
-        <rect x="97" y="150" width="28" height="76" rx="6" opacity=".76"/>
-        <rect x="140" y="168" width="28" height="58" rx="6" opacity=".65"/>
-        <rect x="183" y="128" width="28" height="98" rx="6" opacity=".83"/>
-        <rect x="226" y="112" width="28" height="114" rx="6" opacity=".95"/>
-        <rect x="269" y="136" width="28" height="90" rx="6" opacity=".84"/>
-        <rect x="312" y="83" width="28" height="143" rx="6"/>
+      <g class="bars" fill="url(#bar)">
+        <rect class="bar-rise" x="54" y="172" width="28" height="54" rx="6" opacity=".69"/>
+        <rect class="bar-rise" x="97" y="150" width="28" height="76" rx="6" opacity=".76"/>
+        <rect class="bar-rise" x="140" y="168" width="28" height="58" rx="6" opacity=".65"/>
+        <rect class="bar-rise" x="183" y="128" width="28" height="98" rx="6" opacity=".83"/>
+        <rect class="bar-rise" x="226" y="112" width="28" height="114" rx="6" opacity=".95"/>
+        <rect class="bar-rise" x="269" y="136" width="28" height="90" rx="6" opacity=".84"/>
+        <rect class="bar-rise" x="312" y="83" width="28" height="143" rx="6"/>
       </g>
       <polyline points="68,143 111,119 154,134 197,95 240,101 283,70 326,63" fill="none" stroke="url(#flow)" stroke-width="4.2" stroke-linejoin="round" stroke-linecap="round"/>
+      <polyline class="chart-flow" points="68,143 111,119 154,134 197,95 240,101 283,70 326,63" fill="none" stroke="#E8FFFF" stroke-opacity=".9" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle class="moving-point" cx="0" cy="0" r="5.7" fill="#FFFFFF" stroke="#6DF6DF" stroke-width="3">
+        <animateMotion dur="7s" repeatCount="indefinite" path="M68 143 L111 119 L154 134 L197 95 L240 101 L283 70 L326 63" />
+      </circle>
       <g fill="#FFFFFF" stroke="#7EEFD5" stroke-width="3">
-        <circle cx="68" cy="143" r="4.5"/><circle cx="111" cy="119" r="4.5"/><circle cx="154" cy="134" r="4.5"/><circle cx="197" cy="95" r="4.5"/><circle cx="240" cy="101" r="4.5"/><circle cx="283" cy="70" r="4.5"/><circle cx="326" cy="63" r="4.5"/>
+        <circle class="graph-node" cx="68" cy="143" r="4.5"/><circle class="graph-node" cx="111" cy="119" r="4.5"/><circle class="graph-node" cx="154" cy="134" r="4.5"/><circle class="graph-node" cx="197" cy="95" r="4.5"/><circle class="graph-node" cx="240" cy="101" r="4.5"/><circle class="graph-node" cx="283" cy="70" r="4.5"/><circle class="graph-node" cx="326" cy="63" r="4.5"/>
       </g>
     </g>
   </g>
